@@ -9,5 +9,5 @@ const input = './bin/index.js'
 export default {
   input,
   output: [{ file: pkg.bin, format: 'cjs' }],
-  plugins: [nodeResolve(), shebang()],
+  plugins: [shebang()],
 }
