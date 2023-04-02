@@ -9,24 +9,28 @@ import './utils/handle-errors.js'
 
 import { postData } from './utils/post-data.js'
 
-const stdin = await getStdin()
-const [path] = parse(process.argv)
+async function main() {
+  const stdin = await getStdin()
+  const [path] = parse(process.argv)
 
-let url = ''
+  let url = ''
 
-if (stdin) {
-  url = await postData(stdin)
-} else if (path) {
-  const data = await readFile(path, 'utf-8')
-  url = await postData(data)
-} else {
-  console.error(`
+  if (stdin) {
+    url = await postData(stdin)
+  } else if (path) {
+    const data = await readFile(path, 'utf-8')
+    url = await postData(data)
+  } else {
+    console.error(`
   npx @hbauer/haste [path/to/file]
                   or
   echo "hello" | npx @hbauer/haste
   `)
-  process.exit(1)
+    process.exit(1)
+  }
+
+  console.log(url)
+  copy.writeSync(url)
 }
 
-console.log(url)
-copy.writeSync(url)
+main()
