@@ -2,7 +2,7 @@
   "name": "@hbauer/haste",
   "version": "0.1.6",
   "type": "module",
-  "bin": "./lib/index.js",
+  "bin": "./lib/index.cjs",
   "files": [
     "lib",
     "types"
