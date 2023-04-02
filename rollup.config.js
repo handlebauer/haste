@@ -1,12 +1,12 @@
 import pkg from './package.json' assert { type: 'json' }
 
-const input = './src/index.js'
+const input = './bin/index.js'
 
 // eslint-disable-next-line import/no-default-export
 export default {
   input,
   output: [
-    { file: pkg.main, format: 'cjs' },
-    { file: pkg.module, format: 'esm' },
+    { file: pkg.bin, format: 'esm' },
+    // { file: pkg.module, format: 'esm' },
   ],
 }

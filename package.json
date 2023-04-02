@@ -2,13 +2,7 @@
   "name": "@hbauer/haste",
   "version": "0.0.0",
   "type": "module",
-  "exports": {
-    "import": "./lib/index.mjs",
-    "require": "./lib/index.cjs"
-  },
-  "module": "./lib/index.mjs",
-  "main": "./lib/index.cjs",
-  "types": "types/index.d.ts",
+  "bin": "./lib/index.mjs",
   "files": [
     "lib",
     "types"
@@ -33,6 +27,7 @@
     "@hbauer/eslint-config": "^1.5.0",
     "@hbauer/prettier-config": "^1.1.0",
     "ava": "^5.2.0",
+    "dotenv": "^16.0.3",
     "eslint": "^8.37.0",
     "eslint-plugin-import": "^2.27.5",
     "husky": "^8.0.3",
@@ -40,5 +35,10 @@
     "rollup": "^3.20.2",
     "shx": "^0.3.4",
     "typescript": "^5.0.3"
+  },
+  "dependencies": {
+    "clipboardy": "^3.0.0",
+    "readline2": "^1.0.1",
+    "yargs": "^17.7.1"
   }
 }

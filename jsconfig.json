@@ -9,8 +9,8 @@
     "outDir": "types",
     "noEmit": false,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "node"
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules"],
+  "include": ["bin/**/*"],
+  "exclude": ["node_modules"]
 }

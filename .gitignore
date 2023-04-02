@@ -2,6 +2,8 @@ node_modules
 lib
 types
 
+.env
+
 yarn-debug.log*
 yarn-error.log*
 
