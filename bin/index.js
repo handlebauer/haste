@@ -29,8 +29,11 @@ async function main() {
     process.exit(1)
   }
 
-  console.log(url)
-  copy.writeSync(url)
+  console.info(url)
+
+  try {
+    copy.writeSync(url)
+  } catch (error) {}
 }
 
 main()
