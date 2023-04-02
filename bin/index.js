@@ -1,4 +1,4 @@
-#!/usr/bin/env zx
+#!/usr/bin/env node
 
 import { hideBin as parse } from 'yargs/helpers'
 import { readFile } from 'fs/promises'
